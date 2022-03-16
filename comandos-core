@@ -23,9 +23,14 @@ Get-NetAdapterBinding -ComponentID ‘ms_tcpip6’
 Get-NetAdapterBinding -ComponentID ‘ms_tcpip6’ | Disable-NetAdapterBinding -ComponentID ‘ms_tcpip6’ -PassThru
 
 #si quieres un poco mas de certeza para deshabilitar ipv6 solo en un adaptador
-#primero los listas
+
+#primero los listas todos
  Get-NetAdapter -Name *
+ 
 # si directamente quieres listar los que lo tienen activado
 Get-NetAdapterBinding -ComponentID ms_tcpip6
+
 #para deshabilitar solo uno (en este caso Ethernet)
 Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_tcpip6
+#En mi caso
+Disable-NetAdapterBinding -Name "Interna-hospital" -ComponentID ms_tcpip6
