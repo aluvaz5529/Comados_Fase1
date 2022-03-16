@@ -15,6 +15,7 @@ Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled false
 #Para revisar los firewalls
 Get-NetFirewallProfile | select name, enabled
 
+#Los comandos de ipv6 son en powershell
 #Comprobar el estado protocolo IPV6
 Get-NetAdapterBinding -ComponentID ‘ms_tcpip6’
 
