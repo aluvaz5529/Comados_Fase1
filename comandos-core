@@ -19,5 +19,5 @@ Get-NetFirewallProfile | select name, enabled
 #Comprobar el estado protocolo IPV6
 Get-NetAdapterBinding -ComponentID ‘ms_tcpip6’
 
-#Desactivar el IPV6
+#Desactivar el IPV6 de TODOS los adaptadores
 Get-NetAdapterBinding -ComponentID ‘ms_tcpip6’ | Disable-NetAdapterBinding -ComponentID ‘ms_tcpip6’ -PassThru
