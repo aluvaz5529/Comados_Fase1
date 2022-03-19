@@ -35,5 +35,5 @@ Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_tcpip6
 #En mi caso
 Disable-NetAdapterBinding -Name "Interna-hospital" -ComponentID ms_tcpip6
 
-#
+#Comando para indicar que es un cliente 
 Set-DNSClientServerAddress –InterfaceIndex (Get-NetAdapter).InterfaceIndex –ServerAddresses 192.168.2.2
