@@ -9,6 +9,8 @@ w32tm /config /manualpeerlist:"0.es.pool.ntp.org time.google.com" /syncfromflags
 #Configurar la red (interna)
 netsh interface ipv4 set address name="Ethernet" static 192.168.2.2 255.255.255.0 192.168.2.1
 #La primera es la estática que le vas a poner al equipo,después la máscara y luego el gateway
+#DNS
+Set-DNSClientServerAddress "Ethernet" –ServerAddresses 192.168.2.1
 
 #Esta parte es de powershell para desactivar el firewall
 Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled false
