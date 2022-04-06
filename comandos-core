@@ -4,7 +4,6 @@
 netdom renamecomputer [Nombre actual] /newname [nuevo nombre]
 
 #Sincronizar reloj con internet
-#net time /querysntp sirve para revisar después de poner el comando
 w32tm /config /manualpeerlist:"hora.rediris.es" /syncfromflags:manual /update
 
 #Configurar la red (interna)
