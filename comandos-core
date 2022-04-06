@@ -38,7 +38,7 @@ Disable-NetAdapterBinding -Name "Ethernet" -ComponentID ms_tcpip6
 #En mi caso
 Disable-NetAdapterBinding -Name "Interna-hospital" -ComponentID ms_tcpip6
 
-#Comando para indicar que es un cliente 
+#Comando para indicar que es un cliente de DNS de un servidor principal
 Set-DNSClientServerAddress –InterfaceIndex (Get-NetAdapter).InterfaceIndex –ServerAddresses 192.168.2.2
 #InterfaceIndex es para la priroidad del adaptador de red
 #Es decir este parametro te permite ver y cambiar la métrica , que es la prioridad que tienen los distintos protocolos o interfaces , en este caso es 75
