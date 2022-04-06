@@ -4,7 +4,8 @@
 netdom renamecomputer [Nombre actual] /newname [nuevo nombre]
 
 #Sincronizar reloj con internet
-w32tm /config /manualpeerlist:"0.es.pool.ntp.org time.google.com" /syncfromflags:manual /update
+#net time /querysntp sirve para revisar después de poner el comando
+w32tm /config /manualpeerlist:"hora.rediris.es" /syncfromflags:manual /update
 
 #Configurar la red (interna)
 netsh interface ipv4 set address name="Ethernet" static 192.168.2.2 255.255.255.0 192.168.2.1
